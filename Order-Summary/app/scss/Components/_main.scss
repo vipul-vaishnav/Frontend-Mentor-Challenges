@@ -1,0 +1,186 @@
+@use "../abstracts/index" as *;
+
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $Paleblue;
+  background-image: url("/images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top -8.5rem center;
+  opacity: 0;
+  animation: mainAnimation 1s linear 0.3s forwards;
+  @keyframes mainAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    background-image: url("/images/pattern-background-mobile.svg");
+    background-position: top 0rem center;
+  }
+
+  &__box {
+    @include absCenter;
+    top: calc(50% - 1rem);
+    background-color: $Verypaleblue;
+    overflow: hidden;
+    border-radius: 2rem;
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    opacity: 0;
+    animation: mainAnimation 1s ease-out 2s forwards;
+    @keyframes mainAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      top: calc(50% - 2rem);
+      width: 90vw;
+    }
+
+    &__hero {
+      width: 100%;
+      height: auto;
+
+      &__image {
+        @include fullSpace;
+      }
+    }
+
+    &__content {
+      padding: 3rem 5rem;
+
+      @media screen and (max-width: 450px) {
+        padding: 3rem 3rem;
+      }
+
+      &__title {
+        text-align: center;
+        color: $Darkblue;
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &__paragraph {
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        color: $Desaturatedblue;
+      }
+
+      &__priceBox {
+        @include flex(space-between);
+        background-color: rgba($Paleblue, 0.4);
+        border-radius: 8px;
+        padding: 1.5rem 2rem;
+        margin-bottom: 1rem;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+          rgba(17, 17, 26, 0.1) 0px 0px 1px;
+
+        @media screen and (max-width: 400px) {
+          padding: 1.5rem 1.2rem;
+        }
+
+        &__display {
+          @include flex(flex-start);
+          gap: 1.5rem;
+
+          &__content {
+            width: 100%;
+
+            &__title {
+              color: $Darkblue;
+              margin-bottom: 0.85rem;
+            }
+
+            &__price {
+              color: $Desaturatedblue;
+            }
+          }
+        }
+
+        &__cta {
+          &-link {
+            text-decoration: underline;
+            color: $Brightblue;
+            font-weight: $medium;
+            transition: all 0.3s linear 0.1s;
+
+            &:hover {
+              color: rgba($Brightblue, 0.6);
+            }
+          }
+        }
+      }
+
+      &__ctaBox {
+        margin-top: 2.5rem;
+
+        &__pay {
+          display: block;
+          margin-bottom: 1rem;
+          text-align: center;
+          width: 100%;
+          font-weight: $medium;
+          height: 4.5rem;
+          background-color: $Brightblue;
+          color: $Verypaleblue;
+          border-radius: 0.9rem;
+          border: 0;
+          outline: 0;
+          // box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+          //   rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+          transition: all 0.3s ease-in 0.1s;
+          letter-spacing: 0.75px;
+
+          &:hover {
+            background-color: rgba($Brightblue, 0.7);
+          }
+        }
+
+        &__cancel {
+          display: block;
+          text-align: center;
+          width: 100%;
+          font-weight: $medium;
+          height: 4.5rem;
+          color: $Desaturatedblue;
+          background-color: transparent;
+          border-radius: 0.9rem;
+          border: 0;
+          outline: 0;
+          letter-spacing: 0.75px;
+          transition: all 0.3s ease-in 0.1s;
+
+          &:hover {
+            color: $Darkblue;
+          }
+        }
+      }
+    }
+  }
+
+  &__attribution {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+}

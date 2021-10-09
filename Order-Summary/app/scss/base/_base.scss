@@ -1,0 +1,24 @@
+html {
+  font-size: 62.5%;
+
+  @media screen and (max-width: 350px) {
+    font-size: 55%;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: #364fc7;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: "Red Hat Display", sans-serif;
+  max-width: 100vw;
+  width: 100%;
+  line-height: 1;
+}

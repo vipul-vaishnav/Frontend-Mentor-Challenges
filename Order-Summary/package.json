@@ -1,0 +1,16 @@
+{
+  "name": "order-summary",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Challenge",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "sass --watch ./app/scss/main.scss ./app/css/styles.css"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "SCSS"
+  ],
+  "author": "Vipul Vaishnav",
+  "license": "ISC"
+}
