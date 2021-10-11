@@ -5,8 +5,8 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here](https://info-component-fm-new.netlify.app/)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/html-css-js-lMEQdWV4i)
+- Live Site URL: [Live site URL here](https://info-component-fm-new.netlify.app/)
 
 **BY VIPUL VAISHNAV**
 
